@@ -5,6 +5,7 @@ import { handleOutput } from "./utils/util.mjs";
 
 async function main() {
   const args = argv["_"];
+  console.log("args", args);
   if (args.length != 1) {
     console.log(chalk.yellow("usage:"), "push.mjs COMMIT_CONTENT");
     console.log('if there is multiple words, then use "" to wrap the content');
