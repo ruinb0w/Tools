@@ -9,8 +9,7 @@ export function createElDialogTemplate(options) {
 }
 
 function setJS(component_name, file_name) {
-  const js_boilerplate = `import {computed} from "vue";
-import {useMain} from "./hook";
+  const js_boilerplate = `import {useMain} from "./hook";
 
 export default{
   name: "${component_name}",
@@ -30,7 +29,7 @@ export default{
 
 function setVue(component_name, file_name) {
   const vue_boilderplate = `<template>
-  <el-dialog custom-class="${kebabize(component_name)}" v-model="show_dialog">
+  <el-dialog custom-class="${kebabize(component_name)}" v-model="state.show_dialog">
   </el-dialog>
 </template>
 
@@ -47,7 +46,7 @@ function setScss(component_name, file_name) {
 }
 
 function setHook(component_name) {
-  const hook_boilerplate = `import {reactive} from "vue"
+  const hook_boilerplate = `import {reactive, computed} from "vue"
 
 export function useMain(props, emit){
   const state = reactive({

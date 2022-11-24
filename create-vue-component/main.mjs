@@ -21,7 +21,7 @@ $.verbose = false;
     type = "normal";
   } else if (args.length == 2) {
     component_name = args[1];
-    type = args[2];
+    type = args[0];
   }
   const exist = await checkExist(component_name);
   if (exist) {

@@ -28,10 +28,10 @@ function setHook(component_name) {
   const hook_boilerplate = `import {reactive} from "vue"
 
 export function useMain(){
-    const state = reactive({});
+  const state = reactive({});
 
-    return {state}
-  }
+  return {state}
+}
   `;
 
   $`echo  ${hook_boilerplate} > ${component_name}/hook.js`;
